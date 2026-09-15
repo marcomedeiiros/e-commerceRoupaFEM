@@ -140,7 +140,7 @@ export const Products: React.FC = () => {
         {/* Feedback de erro */}
         {error && (
           <div className="text-center py-8 text-rose-600 text-sm">
-            {error} —{' '}
+            {error} -{' '}
             <button
               onClick={fetchProducts}
               className="underline font-semibold hover:text-rose-800"

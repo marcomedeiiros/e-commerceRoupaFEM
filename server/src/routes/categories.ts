@@ -19,7 +19,7 @@ function rowToCategory(row: Record<string, unknown>): Category {
 /**
  * GET /api/categories
  * Query params opcionais:
- *   activeOnly — "true" retorna apenas categorias ativas
+ *   activeOnly "true" retorna apenas categorias ativas
  */
 router.get('/', (req: Request, res: Response, next: NextFunction) => {
   try {

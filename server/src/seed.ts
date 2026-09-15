@@ -1,5 +1,5 @@
 /**
- * seed.ts — Popula o banco com os dados originais do front-end.
+ * seed.ts Popula o banco com os dados originais do front-end.
  * Execute com: npm run seed
  * Só insere dados se as tabelas estiverem vazias (idempotente).
  */

@@ -7,7 +7,7 @@ const router = Router();
  * POST /api/coupons/validate
  * Body: { code: string }
  * Retorna se o cupom é válido e o percentual de desconto.
- * O código do cupom NUNCA é retornado em texto puro — apenas o resultado da validação.
+ * O código do cupom NUNCA é retornado em texto puro apenas o resultado da validação.
  */
 router.post('/validate', (req: Request, res: Response, next: NextFunction) => {
   try {

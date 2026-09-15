@@ -29,16 +29,16 @@ function rowToProduct(row: Record<string, unknown>): Product {
 /**
  * GET /api/products
  * Query params opcionais:
- *   search     — texto livre (name, description, category)
- *   category   — filtra por categoria exata
- *   sizes      — lista separada por vírgula e.g. "36,38"
- *   colors     — lista separada por vírgula e.g. "Preto,Bege"
- *   priceMax   — preço máximo (número)
- *   inStock    — "true" filtra apenas com stock > 0
- *   sortBy     — "recent" | "price-asc" | "price-desc" | "best-sellers" | "rating"
- *   featured   — "true" retorna apenas produtos em destaque
- *   isNew      — "true" retorna apenas lançamentos
- *   limit      — limita quantidade de resultados
+ *   search     texto livre (name, description, category)
+ *   category   filtra por categoria exata
+ *   sizes      lista separada por vírgula e.g. "36,38"
+ *   colors     lista separada por vírgula e.g. "Preto,Bege"
+ *   priceMax   preço máximo (número)
+ *   inStock    "true" filtra apenas com stock > 0
+ *   sortBy     "recent" | "price-asc" | "price-desc" | "best-sellers" | "rating"
+ *   featured   "true" retorna apenas produtos em destaque
+ *   isNew      "true" retorna apenas lançamentos
+ *   limit      limita quantidade de resultados
  */
 router.get('/', (req: Request, res: Response, next: NextFunction) => {
   try {
@@ -71,7 +71,7 @@ router.get('/', (req: Request, res: Response, next: NextFunction) => {
       params.push(category);
     }
 
-    // Filtro de tamanhos — verifica se o JSON da coluna contém o tamanho
+    // Filtro de tamanhos verifica se o JSON da coluna contém o tamanho
     if (sizes) {
       const sizeList = sizes.split(',').map((s) => s.trim()).filter(Boolean);
       if (sizeList.length > 0) {

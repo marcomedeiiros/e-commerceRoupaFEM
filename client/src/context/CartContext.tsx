@@ -29,7 +29,7 @@ interface CartContextData {
 const CART_STORAGE_KEY = '@aura_atelier:cart_v1';
 const COUPON_STORAGE_KEY = '@aura_atelier:coupon_v1';
 
-/** Threshold de frete grátis — valor vem da API mas temos um fallback local */
+/** Threshold de frete grátis valor vem da API mas temos um fallback local */
 const DEFAULT_FREE_SHIPPING_THRESHOLD = 299.9;
 
 const CartContext = createContext<CartContextData>({} as CartContextData);
